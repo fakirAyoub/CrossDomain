@@ -10,6 +10,7 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
+	<!-- actualizacion -->
 <section id="formulario">
 	<h1>Envio de formulario CrossDomain</h1>
 	<form id="field">
