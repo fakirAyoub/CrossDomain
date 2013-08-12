@@ -10,7 +10,7 @@
 	<script src="js/script.js"></script>
 </head>
 <body>
-	<!-- actualizacion 3:03 -->
+	<!-- actualizacion 3:03 oaguillon udating 3:15-->
 <section id="formulario">
 	<h1>Envio de formulario CrossDomain</h1>
 	<form id="field">
