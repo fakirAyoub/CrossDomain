@@ -1,0 +1,81 @@
+/* ============================== Estilos globales ===============================*/
+body{
+	font-family: Verdana;
+	color: #444444;
+	font-size: 14px;
+	background: #fff;
+}
+
+p{
+	padding: 0px;
+	margin: 0px;
+	text-align: left;
+}
+
+a{ 
+	text-decoration: none;
+	color: #02a1bf;
+}
+
+h1,h2,h3,h4,h5,h6{
+	color: #02a1bf;
+}
+
+section#formulario{
+	background: #f9f9f9;
+	border: 1px solid #ededed;
+	min-height: 350px;
+	width: 700px;
+	margin: 30px auto;
+	padding: 10px;
+}
+
+section#formulario h1{
+	padding: 0px;
+	margin: 10px;
+	text-align: center;
+}
+
+section#formulario form {
+	margin: 0px auto;
+	width: 90%;
+}
+
+section#formulario form input{
+	border: 1px solid #c1c1c1;
+	height: 32px;
+	line-height: 32px;
+	margin: 5px 0px 5px 0px;
+	width: 100%;
+	
+}
+ section#formulario form label{
+ 	display: block;
+ 	font-size: 16px;
+ }
+
+
+section#formulario form input:focus{
+	outline: none;
+	border: 1px solid #02a1bf;
+ }
+
+section#formulario form button{
+	float: right;
+	height: 32px;
+	line-height: 32px;
+	background: #02a1bf;
+	color: #fff;
+	border: none;
+	margin: 10px;
+	font-family: arial;
+}
+
+section#resultado{
+		background: #f9f9f9;
+	border: 1px solid #ededed;
+	min-height: 180px;
+	width: 700px;
+	margin: 30px auto;
+	padding: 10px;
+}

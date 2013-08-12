@@ -1,0 +1,25 @@
+﻿/* TEAM */  
+HALLTEC
+
+Developer Backend : Oscar Manuel Aguillon Silva
+Email Developer: aguillon_@hotmail.com
+Phone: 318 410 9181
+Twitter: @oaguillon
+From: San Gil, Santander, Colombia
+
+/* THANKS */
+
+
+		
+
+/* SITE */
+In this test you can send information crossdomain, your aplication can be in a different server while the file proccess can be in other server, 
+this can be a solution for app building with phonegap and jquery mobile,
+
+languages: javascrip, ajax, jquery, php, html5, css3
+
+
+Language:Castellano
+Copyright: halltec©2013
+License: Halltec
+Version: 1.0.0
