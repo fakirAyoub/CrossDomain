@@ -22,6 +22,9 @@ $(document).on("ready",function(){
 					//console.log(c + '=>' + v);
 					if (userFail == c) {
 						alert("Fatal error user validation");
+						$("#resultado").append("Fatal error user validation");
+					}else{
+						$("#resultado").append(c + '=>' + v);
 					};
 				});
 			}
