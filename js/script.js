@@ -11,7 +11,8 @@ $(document).on("ready",function(){
 	$("button#send").on("click",function(){
 	var field = $("section#formulario form").serialize();
 	var userFail = "error";
-		$.ajax({
+
+		/*$.ajax({
 			type: "get",
 			dataType : 'jsonp',
 			url: "http://imagineriaweb.com/oaguillon/cross_domain/proccess.php",
@@ -28,7 +29,14 @@ $(document).on("ready",function(){
 					};
 				});
 			}
+		});*/
+
+
+		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
+			console.log(data);
 		});
+
+
 	// console.log(field);
 	});//================== ending onclick
 });//================== ending docuemnt.ready
