@@ -26,7 +26,7 @@ section#formulario{
 	border: 1px solid #ededed;
 	min-height: 350px;
 	min-width: 400px;
-	max-width: 60%;
+	width: 60%;
 	margin: 30px auto;
 	padding: 10px;
 	border-radius: 6px;
@@ -78,8 +78,7 @@ section#resultado{
 	border: 1px solid #ededed;
 	min-height: 180px;
 	border-radius: 6px;
-	min-width: 400px;
-	max-width: 60%;
+	width: 60%;
 	margin: 30px auto;
 	padding: 10px;
 }
