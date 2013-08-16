@@ -33,11 +33,12 @@ $(document).on("ready",function(){
 
 
 		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
-			//console.log(data);
+			console.log(data);
+				$("section#debug").append(data);
 				var obj = $.parseJSON(data);
-				$("#resultado h1#name").append(obj.name+' '+obj.lastname);
-				$("#resultado #Email").append('<span>Email: </span>'+obj.email);
-				$("#resultado #CellPhone").append('<span>Celular: </span>'+obj.cellPhone);
+				$("section#resultado h1#name").append(obj.name+' '+obj.lastname);
+				$("section#resultado #Email").append('<span>Email: </span>'+obj.email);
+				$("section#resultado #CellPhone").append('<span>Celular: </span>'+obj.cellPhone);
 		});
 
 

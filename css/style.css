@@ -20,12 +20,20 @@ a{
 h1,h2,h3,h4,h5,h6{
 	color: #02a1bf;
 }
+section#debug{
+	border-top: 1px solid #ededed;
+	min-height: 20px;
+	font-size: 12px;
+	width: 100%;
+	font-family: 'Ubuntu mono', sans-serif;
+	background: #f9f9f9;
+}
+
 
 section#formulario{
 	background: #f9f9f9;
 	border: 1px solid #ededed;
 	min-height: 350px;
-	min-width: 400px;
 	width: 60%;
 	margin: 30px auto;
 	padding: 10px;
