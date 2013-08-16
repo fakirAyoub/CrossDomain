@@ -1,6 +1,6 @@
 function fullFields()
 {
-	var campos = new Array("Oscar Manuel","Aguillon Silva","aguillon_@hotmail.com","300 421 2136");
+	var campos = new Array("Oscar Mauricio","Aguillon Silva","aguillon_@hotmail.com","300 421 2136");
 	for (var i = 0; i <= 4; i++) {
 			$("section#formulario form input").eq(i).val(campos[i]);
 	};
@@ -33,7 +33,11 @@ $(document).on("ready",function(){
 
 
 		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
-			console.log(data);
+			//console.log(data);
+				var obj = $.parseJSON(data);
+				$("#resultado h1#name").append(obj.name+' '+obj.lastname);
+				$("#resultado #Email").append('<span>Email: </span>'+obj.email);
+				$("#resultado #CellPhone").append('<span>Celular: </span>'+obj.cellPhone);
 		});
 
 

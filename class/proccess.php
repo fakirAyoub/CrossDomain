@@ -14,9 +14,9 @@ $array = array("mensaje" => "Hola desde otro punto de la red no tienes porque es
 
     if(isset($_POST['name'])){ // Si es una petición cross-domain
     	if ($objeto["name"] == $nombre) {
-			echo '('.json_encode($alertaUser).')';
+			echo json_encode($alertaUser);
 		}else{
-			echo '('.json_encode($objeto).')';
+			echo json_encode($objeto);
 		}        
     	//$sql = "insert into jsonp_cross (id,name,lastname,mail,cellPhone) values (null,'".$name."','".$lastname."','".$email."','".$cellPhone."')";           
     	//$res=mysql_query($sql,Conectar::con());

@@ -1,4 +1,4 @@
-/* ============================== Estilos globales ===============================*/
+ /* ============================== Estilos globales ===============================*/
 body{
 	font-family: Verdana;
 	color: #444444;
@@ -25,7 +25,8 @@ section#formulario{
 	background: #f9f9f9;
 	border: 1px solid #ededed;
 	min-height: 350px;
-	width: 60%;
+	min-width: 400px;
+	max-width: 60%;
 	margin: 30px auto;
 	padding: 10px;
 	border-radius: 6px;
@@ -73,12 +74,42 @@ section#formulario form button{
 }
 
 section#resultado{
-		background: #f9f9f9;
+	background: #f9f9f9;
 	border: 1px solid #ededed;
 	min-height: 180px;
-	
-		border-radius: 6px;
-		width: 60%;
+	border-radius: 6px;
+	min-width: 400px;
+	max-width: 60%;
 	margin: 30px auto;
 	padding: 10px;
+}
+
+.grid1{
+	width: 100%;
+	min-height: 30px;
+	/*border: 1px solid #f00;*/
+	vertical-align: top;
+}
+.grid2{
+	width: 49.4%;
+	min-height: 30px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 0px 0px 0px;
+	/*border: 1px solid #f00;*/
+}
+.grid3{
+	width: 32.8%;
+	min-height: 30px;
+	/*border: 1px solid #f00;*/
+	display: inline-block;
+	vertical-align: top;
+}
+.grid4{
+	width: 24.2%;
+	min-height: 30px;
+	/*border: 1px solid #f00;*/
+	display: inline-block;
+	vertical-align: top;
+	/*border: 1px solid #f00;*/
 }
