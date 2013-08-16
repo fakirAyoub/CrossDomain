@@ -25,9 +25,10 @@ section#formulario{
 	background: #f9f9f9;
 	border: 1px solid #ededed;
 	min-height: 350px;
-	width: 700px;
+	width: 60%;
 	margin: 30px auto;
 	padding: 10px;
+	border-radius: 6px;
 }
 
 section#formulario h1{
@@ -75,7 +76,9 @@ section#resultado{
 		background: #f9f9f9;
 	border: 1px solid #ededed;
 	min-height: 180px;
-	width: 700px;
+	
+		border-radius: 6px;
+		width: 60%;
 	margin: 30px auto;
 	padding: 10px;
 }
