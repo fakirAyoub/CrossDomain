@@ -71,13 +71,14 @@ section#formulario form input:focus{
  }
 
 section#formulario form button{
-	float: right;
+	border-radius: 4px;
 	height: 32px;
 	line-height: 32px;
 	background: #02a1bf;
 	color: #fff;
 	border: none;
-	margin: 10px;
+	margin: 10px auto;
+	display: block;
 	font-family: arial;
 }
 
@@ -119,4 +120,18 @@ section#resultado{
 	display: inline-block;
 	vertical-align: top;
 	/*border: 1px solid #f00;*/
+}
+
+/*====================================== media queries app =====================================================*/
+
+@media screen and (max-width: 400px){
+
+	section#resultado,section#formulario{
+		width: 90%;
+	}
+
+	section#formulario form button{
+		width: 100%;
+	}
+
 }
