@@ -11,27 +11,22 @@ $(document).on("ready",function(){
 	$("button#send").on("click",function(){
 	var field = $("section#formulario form").serialize();
 	var userFail = "error";
-
-		/*$.ajax({
-			type: "get",
-			dataType : 'jsonp',
+/*
+		$.ajax({
+			beforeSend: function(){
+				$("section#loading").fadeIn(300);
+			},
+			type: "post",
+			//dataType : 'jsonp',
 			url: "http://imagineriaweb.com/oaguillon/cross_domain/proccess.php",
 			data: field,
 			success: function(info){
 				console.log(info);		
-				$.each(info,function(c,v){
-					//console.log(c + '=>' + v);
-					if (userFail == c) {
-						alert("Fatal error user validation");
-						$("#resultado").append("Fatal error user validation");
-					}else{
-						$("#resultado").append(c + '=>' + v);
-					};
-				});
+				$("section#loading").fadeOut(300);
 			}
-		});*/
+		});
 
-
+*/
 		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
 			console.log(data);
 				$("section#debug").append(data);

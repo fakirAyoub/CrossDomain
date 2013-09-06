@@ -92,6 +92,23 @@ section#resultado{
 	padding: 10px;
 }
 
+section#loading{
+	border: 1px solid #ededed;
+	width: 60%;
+	height: 32px;
+	margin: 0px auto;
+	background: #f9f9f9;
+	padding: 10px;
+	border-radius: 6px;
+	display: none;
+}
+
+
+section#loading img{
+	display: block;
+	margin: 0px auto;
+}	
+
 .grid1{
 	width: 100%;
 	min-height: 30px;
