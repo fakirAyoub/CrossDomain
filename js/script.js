@@ -27,6 +27,7 @@ $(document).on("ready",function(){
 		});
 
 */
+
 		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
 			console.log(data);
 				$("section#debug").append(data);
@@ -34,9 +35,25 @@ $(document).on("ready",function(){
 				$("section#resultado h1#name").append(obj.name+' '+obj.lastname);
 				$("section#resultado #Email").append('<span>Email: </span>'+obj.email);
 				$("section#resultado #CellPhone").append('<span>Celular: </span>'+obj.cellPhone);
+				localStorage.setItem("user",obj.email);
 		});
 
-
-	// console.log(field);
+			// console.log(field);
 	});//================== ending onclick
+
+
+$("input#clean").on("click",function(){
+	localStorage.removeItem("user");
+});
+
+var user = localStorage.getItem("user");
+if (user) {
+	$("section#top").html(user);
+}else{
+	$("section#top").html("Please you have singUp");
+};
+
+
+
+
 });//================== ending docuemnt.ready

@@ -30,6 +30,15 @@ section#debug{
 }
 
 
+
+section#top{
+	border: 1px solid #f00;
+	height: 32px;
+	line-height: 32px;
+	width: 100%;
+}
+
+
 section#formulario{
 	background: #f9f9f9;
 	border: 1px solid #ededed;
@@ -152,3 +161,5 @@ section#loading img{
 	}
 
 }
+
+
