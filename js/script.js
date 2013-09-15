@@ -1,57 +1,76 @@
 function fullFields()
 {
-	var campos = new Array("Oscar Mauricio","Aguillon Silva","aguillon_@hotmail.com","300 421 2136");
-	for (var i = 0; i <= 4; i++) {
+	var campos = new Array("aguillon_@hotmail.com","6203222ags");
+	for (var i = 0; i <= 2; i++) {
 			$("section#formulario form input").eq(i).val(campos[i]);
 	};
 }
 
+
+function removeUser(){
+	var session = localStorage.getItem("user");    	
+console.log(session);
+	if (session) {
+		$("section#top").html(session);
+		$("input#clean").on("click",function(){
+			localStorage.removeItem("user");
+			$("section#top").html("Usted a cerrado sesion");
+		});
+	};
+
+}
+
+
+
+
 $(document).on("ready",function(){
 
-	$("button#send").on("click",function(){
+	removeUser();
+
+	$("input#send").on("click",function(){
 	var field = $("section#formulario form").serialize();
-	var userFail = "error";
-/*
+
 		$.ajax({
 			beforeSend: function(){
 				$("section#loading").fadeIn(300);
 			},
 			type: "post",
-			//dataType : 'jsonp',
 			url: "http://imagineriaweb.com/oaguillon/cross_domain/proccess.php",
 			data: field,
-			success: function(info){
-				console.log(info);		
-				$("section#loading").fadeOut(300);
+			success: function(info){			
+             	
+             	lista = JSON.parse(info);
+ 
+		        for(var i in lista){
+		            if (!lista[i].error) {
+		            	var addSession = localStorage.setItem("user",lista[i].mail);
+		            	var session = localStorage.getItem("user");   
+		            	$("section#top").html(session);
+		            	$("section#debug").html(lista[i].name+" "+lista[i].lastname+" "+lista[i].mail);
+		            }else{
+		            	$("section#debug").html("Usuario o pasword no coinciden");		            	
+		            };	            
+		        }
+
+		        $("section#loading").fadeOut(300);
+
+			},
+			error: function (obj, error, objError){
+            	console.log("We have an error");
+        	},
+			complete: function(){
+				
 			}
-		});
+		});// ======= end ajax method
 
-*/
 
-		$.post("http://imagineriaweb.com/oaguillon/cross_domain/proccess.php", field , function(data){
-			console.log(data);
-				$("section#debug").append(data);
-				var obj = $.parseJSON(data);
-				$("section#resultado h1#name").append(obj.name+' '+obj.lastname);
-				$("section#resultado #Email").append('<span>Email: </span>'+obj.email);
-				$("section#resultado #CellPhone").append('<span>Celular: </span>'+obj.cellPhone);
-				localStorage.setItem("user",obj.email);
-		});
+
+
 
 			// console.log(field);
 	});//================== ending onclick
 
 
-$("input#clean").on("click",function(){
-	localStorage.removeItem("user");
-});
-
-var user = localStorage.getItem("user");
-if (user) {
-	$("section#top").html(user);
-}else{
-	$("section#top").html("Please you have singUp");
-};
 
 
 
