@@ -9,12 +9,15 @@ function fullFields()
 
 function removeUser(){
 	var session = localStorage.getItem("user");    	
-console.log(session);
+
 	if (session) {
 		$("section#top").html(session);
+		$.mobile.changePage("#pagina2");
 		$("input#clean").on("click",function(){
+			$.mobile.changePage("#pagina1");
 			localStorage.removeItem("user");
 			$("section#top").html("Usted a cerrado sesion");
+			
 		});
 	};
 
@@ -43,6 +46,7 @@ $(document).on("ready",function(){
  
 		        for(var i in lista){
 		            if (!lista[i].error) {
+		            	$.mobile.changePage("#pagina2",{transition:'slide'});
 		            	var addSession = localStorage.setItem("user",lista[i].mail);
 		            	var session = localStorage.getItem("user");   
 		            	$("section#top").html(session);
